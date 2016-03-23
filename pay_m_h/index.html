@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>支付中心</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=yes">
+<meta charset="utf-8">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" href="css/reset.css" type="text/css">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript">
+    window.onload=ShowMessage();
+    function ShowMessage(){
+        var phoneWidth =  parseInt(window.screen.width);
+        var phoneScale = phoneWidth/640;
+        var isAndroid = RegExp("Andr").test(navigator.userAgent);
+        if (isAndroid) {
+            document.write('<meta name="viewport" content="width=640, minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+',   target-densitydpi=device-dpi">');
+        } else {
+            document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+        }
+    }
+</script>
+</head>
+<body>
+<nav class="clear">
+	<div id="3_1" class="page_guide_item">
+		<ul class="page_guide_item_text">
+			<li class="c_btn click_btn" style="border-bottom: 5px solid #2196f3; color: #2196f3;">
+				<span><img src="images/zhifb_coin_after.png" click="clicked"/></span>
+				<p>支付宝</p>
+			</li>
+			<li class="c_btn">
+				<span><img src="images/yidong_coin.png"/></span>
+				<p>移动充值卡</p>
+			</li>
+			<li class="c_btn">
+				<span><img src="images/liant_coin.png"/></span>
+				<p>联通充值卡</p>
+			</li>
+			<li class="c_btn">
+				<span><img src="images/dianxin_coin.png"/></span>
+				<p>电信充值卡</p>
+			</li>
+			<li class="c_btn" style="background: none;">
+				<span><img src="images/tuitui_coin.png"/></span>
+				<p>推推币支付</p>
+			</li>
+		</ul>
+		<div class="page_guide_item_image"></div>
+	</div>
+</nav>
+
+
+<div id="tab_content" class="clear">
+<!-- 支付宝 -->
+<div id="content" class="">
+	<div class="content_top">
+		<div class="content_top_h3 conttop1">
+			<a href="javascript:;"><h3><img src="images/ben_coin.png" class="ben_coin"/><p> 30 </p> 元</h3><span><img src="images/bottom.png" class="bottom"/></span></a>
+		</div>
+		<div class="content_top_infor hide conttop1_infor">
+			<div class="content_top_infor_in">
+				<p>账号：<span>xxxxxxxxxxxxxxxxxx</span></p>
+				<p>商品：<span>100 游戏代币 </span></p>
+			</div>
+		</div>
+	</div>
+	<div class="queb">确认无误后去支付宝付款</div>
+</div>
+<!-- //支付宝 -->
+
+<!-- 移动充值卡 -->
+<div id="content" class="hide">
+	<div class="content_top">
+		<div class="content_top_h3 conttop2">
+			<a href="javascript:;"><h3><img src="images/ben_coin.png" class="ben_coin"/><p> 30 </p> 元</h3><span><img src="images/bottom.png" class="bottom"/></span></a>
+		</div>
+		<div class="content_top_infor hide conttop2_infor">
+			<div class="content_top_infor_in">
+				<p>账号：<span>xxxxxxxxxxxxxxxxxx</span></p>
+				<p>商品：<span>100 游戏代币 </span></p>
+			</div>
+		</div>
+	</div>
+	<div class="content_center">
+		<div class="content_center_infor clear">
+			<h3>（扣除支付金额后剩余金额将自动存入推推账户） </h3>
+			<div class="content_center_infor_cz clear">
+				<ul id="content_li">
+					<li><a href="javascript:;"><img src="images/price_img_0.png"/></a></li>
+					<li><a href="javascript:;"><img src="images/price_img_1.png"/></a></li>
+					<li><a href="javascript:;"><img src="images/price_img_2.png"/></a></li>
+					<li><a href="javascript:;"><img src="images/price_img_3.png"/></a></li>
+					<li><a href="javascript:;"><img src="images/price_img_4.png"/></a></li>
+					<li><a href="javascript:;"><img src="images/price_img_5.png"/></a></li>
+					<li><a href="javascript:;"><img src="images/price_img_7.png"/></a></li>
+				</ul>
+			</div>
+			
+			<div class="input_l">
+				<div class="input_text">
+					<input name="textfield" class="xuhao" type="tel" id="textfield" value="请输入充值卡序列号" onmouseover="this.style.borderColor='#FF6600'" onmouseout="this.style.borderColor=''" onFocus="if (value =='请输入充值卡序列号'){value =''}" onBlur="if (value ==''){value='请输入充值卡序列号'}"/>
+				</div>
+				<div class="input_text" style="border-radius: 0px 0px 5px 5px; border-top:none;">
+					<input name="textfield" class="password" type="tel" id="textfield" value="请输入充值卡密码" onmouseover="this.style.borderColor='#FF6600'" onmouseout="this.style.borderColor=''" onFocus="if (value =='请输入充值卡密码'){value =''}" onBlur="if (value ==''){value='请输入充值卡密码'}"/>
+				</div>
+			</div>
+			
+			<div class="tishi">
+				<h2>温馨提示：</h2>请选择与卡面金额相符的面额，以防充值失败 或卡内资金损失。                             
+			</div>
+			
+			<div class="shuom">
+				<a href="javascript:;">充值说明</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //移动充值卡 -->
+
+<!-- 联通充值卡 -->
+<div id="content" class="hide">
+	<div class="content_top">
+		<div class="content_top_h3 conttop3">
+			<a href="javascript:;"><h3><img src="images/ben_coin.png" class="ben_coin"/><p> 30 </p> 元</h3><span><img src="images/bottom.png" class="bottom"/></span></a>
+		</div>
+		<div class="content_top_infor hide conttop3_infor">
+			<div class="content_top_infor_in">
+				<p>账号：<span>xxxxxxxxxxxxxxxxxx</span></p>
+				<p>商品：<span>100 游戏代币 </span></p>
+			</div>
+		</div>
+	</div>
+	<div class="content_center">
+		<div class="content_center_infor clear">
+			<h3>（扣除支付金额后剩余金额将自动存入推推账户） </h3>
+			<div class="content_center_infor_cz clear">
+				<ul id="content_li">
+					<li><a href="javascript:;"><img src="images/price_img_1.png"/></a></li>
+					<li><a href="javascript:;"><img src="images/price_img_2.png"/></a></li>
+					<li><a href="javascript:;"><img src="images/price_img_3.png"/></a></li>
+					<li><a href="javascript:;"><img src="images/price_img_4.png"/></a></li>
+					<li><a href="javascript:;"><img src="images/price_img_5.png"/></a></li>
+					<li><a href="javascript:;"><img src="images/price_img_6.png"/></a></li>
+					<li><a href="javascript:;"><img src="images/price_img_7.png"/></a></li>
+				</ul>
+			</div>
+			
+			<div class="input_l">
+				<div class="input_text">
+					<input name="textfield" class="xuhao" type="tel" id="textfield" value="请输入充值卡序列号" onmouseover="this.style.borderColor='#FF6600'" onmouseout="this.style.borderColor=''" onFocus="if (value =='请输入充值卡序列号'){value =''}" onBlur="if (value ==''){value='请输入充值卡序列号'}"/>
+				</div>
+				<div class="input_text" style="border-radius: 0px 0px 5px 5px; border-top:none;">
+					<input name="textfield" class="password" type="tel" id="textfield" value="请输入充值卡密码" onmouseover="this.style.borderColor='#FF6600'" onmouseout="this.style.borderColor=''" onFocus="if (value =='请输入充值卡密码'){value =''}" onBlur="if (value ==''){value='请输入充值卡密码'}"/>
+				</div>
+			</div>
+			
+			<div class="tishi">
+				<h2>温馨提示：</h2>请选择与卡面金额相符的面额，以防充值失败 或卡内资金损失。                             
+			</div>
+			
+			<div class="shuom">
+				<a href="javascript:;">充值说明</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //联通充值卡 -->
+
+<!-- 电信充值卡 -->
+<div id="content" class="hide">
+	<div class="content_top">
+		<div class="content_top_h3 conttop4">
+			<a href="javascript:;"><h3><img src="images/ben_coin.png" class="ben_coin"/><p> 30 </p> 元</h3><span><img src="images/bottom.png" class="bottom"/></span></a>
+		</div>
+		<div class="content_top_infor hide conttop4_infor">
+			<div class="content_top_infor_in">
+				<p>账号：<span>xxxxxxxxxxxxxxxxxx</span></p>
+				<p>商品：<span>100 游戏代币 </span></p>
+			</div>
+		</div>
+	</div>
+	<div class="content_center">
+		<div class="content_center_infor clear">
+			<h3>（扣除支付金额后剩余金额将自动存入推推账户） </h3>
+			<div class="content_center_infor_cz clear">
+				<ul id="content_li">
+					<li><a href="javascript:;"><img src="images/price_img_0.png"/></a></li>
+					<li><a href="javascript:;"><img src="images/price_img_1.png"/></a></li>
+					<li><a href="javascript:;"><img src="images/price_img_2.png"/></a></li>
+					<li><a href="javascript:;"><img src="images/price_img_3.png"/></a></li>
+					<li><a href="javascript:;"><img src="images/price_img_4.png"/></a></li>
+					<li><a href="javascript:;"><img src="images/price_img_5.png"/></a></li>
+					<li><a href="javascript:;"><img src="images/price_img_6.png"/></a></li>
+					<li><a href="javascript:;"><img src="images/price_img_7.png"/></a></li>
+				</ul>
+			</div>
+			
+			<div class="input_l">
+				<div class="input_text">
+					<input name="textfield" class="xuhao" type="tel" id="textfield" value="请输入充值卡序列号" onmouseover="this.style.borderColor='#FF6600'" onmouseout="this.style.borderColor=''" onFocus="if (value =='请输入充值卡序列号'){value =''}" onBlur="if (value ==''){value='请输入充值卡序列号'}"/>
+				</div>
+				<div class="input_text" style="border-radius: 0px 0px 5px 5px; border-top:none;">
+					<input name="textfield" class="password" type="tel" id="textfield" value="请输入充值卡密码" onmouseover="this.style.borderColor='#FF6600'" onmouseout="this.style.borderColor=''" onFocus="if (value =='请输入充值卡密码'){value =''}" onBlur="if (value ==''){value='请输入充值卡密码'}"/>
+				</div>
+			</div>
+			
+			<div class="tishi">
+				<h2>温馨提示：</h2>请选择与卡面金额相符的面额，以防充值失败 或卡内资金损失。                             
+			</div>
+			
+			<div class="shuom">
+				<a href="javascript:;">充值说明</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //电信充值卡 -->
+
+<!-- 推推币支付 -->
+<div id="content" class="hide">
+	<div class="content_t">
+		<div class="content_t_h3">
+			<a href="javascript:;"><h3>余额：<i> 0 </i> <bdi>推推币</bdi></h3><span><img src="images/shuax.png" class="shuax"/></span></a>
+		</div>
+	</div>
+	<div class="content_top">
+		<div class="content_top_h3 conttop5">
+			<a href="javascript:;"><h3><img src="images/ben_coin.png" class="ben_coin"/><p> 30 </p> 元</h3><span><img src="images/bottom.png" class="bottom"/></span></a>
+		</div>
+		<div class="content_top_infor hide conttop5_infor">
+			<div class="content_top_infor_in">
+				<p>账号：<span>xxxxxxxxxxxxxxxxxx</span></p>
+				<p>商品：<span>100 游戏代币 </span></p>
+			</div>
+		</div>
+	</div>	
+</div>
+<!-- //推推币支付 -->
+</div>
+
+<!-- 充值说明 -->
+<div class="assshow hide">
+	<div class="assshow_content">
+		<div class="assshow_infor">
+			<div class="assshow_infor_in">
+				<h3>充值卡充值说明</h3>
+				<ul>
+					<li>· 充值卡的到账过程可能需要1-2分钟。</li>
+					<li>· 由于充值卡支付渠道的限制，如果所选面值与卡的实际面额不符，将导致交易失败。为避免您的资金损失，系统将自动把卡内的余额充入推推账户，您可以选择使用推推币为游戏充值。</li>
+					<li>· 除以下充值卡外，不支持其它运营商发行的增值业务卡，例如彩铃卡等。</li>
+					<p>a) 移动：</p>
+					<li>· 支持全国卡（卡号17位，卡密18位），仅支持以下地方卡：
+						<ol>
+							<li>江苏（卡号16位，卡密17位）</li>
+							<li>浙江（卡号10位，卡密8位）</li>
+							<li>辽宁（卡号16位，卡密21位）</li>
+							<li>福建（卡号16位，卡密17位）</li>
+						</ol>
+					</li>
+					<li>· 移动充值卡支持面额：10元，20元，30元，50元，100元，300元，500元 </li>
+					<p>b) 联通：</p>
+					<li>· 支持全国卡（卡号15位，卡密19位），不支持地方卡</li>
+					<li>· 联通充值卡支持面额：20元，30元，50元，100元，300元，500元 </li>
+					<p>c) 电信：</p>
+					<li>· 仅支持全国通用的中国电信充值付费卡（卡号19位，卡密18位），不支持地方卡</li>
+					<li>· 电信充值卡支持面额：10元，20元，30元，50元，100元，200元，300元，500元</li>
+				</ul>
+				
+			</div>
+		</div>	
+	<a href="javascript:;" class="close"><img src="images/close.png"/></a>
+	</div>
+</div>
+<!-- //充值说明 -->
+<div class="footer" id="foot">
+	<div class="footerimg"><a href="javascript:;"><img src="images/fuk.png"/></a></div>
+	<div class="footerimg hide"><a href="javascript:;"><img src="images/lijizf.png"/></a></div>
+	<div class="footerimg hide"><a href="javascript:;"><img src="images/lijizf.png"/></a></div>
+	<div class="footerimg hide"><a href="javascript:;"><img src="images/lijizf.png"/></a></div>
+	<div class="footerimg hide"><a href="tuituib.html"><img src="images/yubuz.png"/></a></div>
+</div>
+
+<script type="text/javascript" src="js/style.js"></script>
+<script type="text/javascript">	
+	var content_li=document.getElementById("content_li").getElementsByTagName("li") ;
+	//alert(content_li);
+	
+	$(".close").click(function(){
+		$(".assshow").hide();
+	})
+	
+	$(".shuom a").click(function(){
+		$(".assshow").show();
+	})
+	
+	$("#content_li>li>a>img").bind("click",function(){
+		var checkedObjs = $("#content_li>li>a>img[click=clicked]");
+		console.log(checkedObjs);
+		if(checkedObjs.length > 0){	
+			var checkedObj = checkedObjs[0];
+			var checkedSrc = $(checkedObj).attr("src");
+			if(checkedSrc.indexOf("after") != -1){
+				var checkedPre = checkedSrc.toString().substring(0,checkedSrc.toString().lastIndexOf("after")-1);
+				var checkedSup = checkedSrc.toString().substring(checkedSrc.toString().lastIndexOf("after")+5,checkedSrc.length);
+				$(checkedObj).attr("src",checkedPre+checkedSup).removeAttr("click");
+			}
+		}
+		
+		var clickImgSrc = $(this).attr("src");
+		var imgPre = clickImgSrc.toString().substring(0,clickImgSrc.toString().lastIndexOf("."));
+		var imgSup = clickImgSrc.toString().substring(clickImgSrc.toString().lastIndexOf("."),clickImgSrc.length);
+		$(this).attr("src",imgPre+"_after"+imgSup).attr("click","clicked");
+		
+		
+	});
+	
+	
+	var oBtn = document.getElementById('3_1').getElementsByTagName('li');
+	var oDiv =document.getElementById('tab_content').children;
+	var foot =document.getElementById('foot').children;
+	//alert(oDiv.length);
+	var i=0;
+	for(i=0;i<oBtn.length;i++)
+	{
+		oBtn[i].index=i;
+		oBtn[i].onclick = function () {
+			var c = 'c_btn';
+			
+			for (var k=0;k<oBtn.length;k++)
+			{
+				oBtn[k].className = c;
+				oDiv[k].style.display = 'none';
+				oBtn[k].style.color='#616161';
+				oBtn[k].style.borderBottom='5px solid #fff';
+				foot[k].style.display = 'none';
+			}
+			this.className =c+' '+'click_btn';
+			oDiv[this.index].style.display = 'block';
+			oBtn[this.index].style.color='#2196f3';
+			oBtn[this.index].style.borderBottom='5px solid #2196f3';	
+			foot[this.index].style.display = 'block';
+		}  
+	}
+	
+	$(".page_guide_item_text>li").bind("click",function(){
+		var checkbjs = $(".page_guide_item_text>li>span>img[click=clicked]");
+		if(checkbjs.length > 0){	
+			var checkbj = checkbjs[0];
+			var checSrc = $(checkbj).attr("src");
+			if(checSrc.indexOf("after") != -1){
+				var checPre = checSrc.toString().substring(0,checSrc.toString().lastIndexOf("after")-1);
+				var checSup = checSrc.toString().substring(checSrc.toString().lastIndexOf("after")+5,checSrc.length);
+				$(checkbj).attr("src",checPre+checSup).removeAttr("click");
+			}
+		}
+		
+		var clickSrc = $(this).find('img').attr("src");
+		var iPre = clickSrc.toString().substring(0,clickSrc.toString().lastIndexOf("."));
+		var iSup = clickSrc.toString().substring(clickSrc.toString().lastIndexOf("."),clickSrc.length);
+		$(this).find('img').attr("src",iPre+"_after"+iSup).attr("click","clicked");		
+	});
+		
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>支付中心</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=yes">
+<meta charset="utf-8">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" href="css/reset.css" type="text/css">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.storageapi.min.js"></script>
+<script type="text/javascript" src="js/tuitui.js"></script>
+</head>
+<body>
+<section>
+<!-- 移动充值卡 -->
+<div id="content">
+	<div class="content_center">
+		<div class="content_center_infors clear" style="padding: 0px 13px 0px;">
+			<h3>请选择推推币的个数</h3>
+			<div class="content_center_infor_czs clear" style="margin: 0px 0 12px;">
+				<ul id="content_li">
+					<li>
+						<img src="images/qit.png" />
+						<h2 value="10"><p>10</p><span>个</span></h2>
+					</li>
+					<li>
+						<img src="images/qit.png" />
+						<h2 value="20"><p>20</p><span>个</span></h2>
+					</li>
+					<li>
+						<img src="images/qit.png" />
+						<h2 value="50"><p>50</p><span>个</span></h2>
+					</li>
+					<li>
+						<img src="images/qit.png" />
+						<h2 value="100"><p>100</p><span>个</span></h2>
+					</li>
+					<li>
+						<img src="images/qit.png" />
+						<h2 onclick="document.getElementById('count').focus()">
+							<input name="textfield" class="qit qtts" type="text" id="count" value="输入其他" onFocus="if (value =='输入其他'){value =''}" />
+							<span onclick="document.getElementById('count').focus()">个</span>
+						</h2>
+					</li>
+				</ul>
+			</div>
+			<div class="tuitui_b">
+				<div class="tuitui_b_h3">
+					<a href="javascript:;"><h2>需要消费：<i id="amount"> 0 </i> <bdi>元</bdi></h2></a>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<!-- //移动充值卡 -->
+
+<div class="footer">
+	<div class="footerimg"><a href="javascript:;" id="do_pay"><input class="footerimgs" type="button" value="去充值"></a></div>
+</div>
+</section>
+<script type="text/javascript" src="js/tuituib_logic.js"></script>
+</body>
+</html>

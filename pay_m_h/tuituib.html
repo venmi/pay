@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>支付中心</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=yes">
+<meta charset="utf-8">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" href="css/reset.css" type="text/css">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+</head>
+<body>
+<section>
+<!-- 移动充值卡 -->
+<div id="content">
+	<div class="content_center">
+		<div class="content_center_infor clear" style="padding: 18px 19px 0px;">
+			<h3>请选择推推币的个数</h3>
+			<div class="content_center_infor_cz clear" style="margin: 17px 0 19px;">
+				<ul id="content_li">
+					<li><a href="javascript:;"><img src="images/10g.png"/></a></li>
+					<li><a href="javascript:;"><img src="images/20g.png"/></a></li>
+					<li><a href="javascript:;"><img src="images/50g.png"/></a></li>
+					<li><a href="javascript:;"><img src="images/100g.png"/></a></li>
+					<input name="textfield" class="qit" type="text" id="textfield" value="输入其他" onmouseover="this.style.borderColor='#FF6600'" onmouseout="this.style.borderColor=''" onFocus="if (value =='输入其他'){value =''}" onBlur="if (value ==''){value='输入其他'}"/>
+				</ul>
+			</div>
+			<div class="tuitui_b">
+				<div class="tuitui_b_h3">
+					<a href="javascript:;"><h2>需要消费：<i> 0 </i> <bdi>元</bdi></h2></a>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<!-- //移动充值卡 -->
+
+<div class="footer">
+	<div class="footerimg"><a href="javascript:;"><img src="images/cz.png"/></a></div>
+</div>
+</section>
+
+<script type="text/javascript">
+	//充值图片点击切换图片
+	$("#content_li>li>a>img").bind("click",function(){
+		var checkedObjs = $("#content_li>li>a>img[click=clicked]");
+		if(checkedObjs.length > 0){
+			var checkedObj = checkedObjs[0];
+			var checkedSrc = $(checkedObj).attr("src");
+			if(checkedSrc.indexOf("after") != -1){
+				var checkedPre = checkedSrc.toString().substring(0,checkedSrc.toString().lastIndexOf("after")-1);
+				var checkedSup = checkedSrc.toString().substring(checkedSrc.toString().lastIndexOf("after")+5,checkedSrc.length);
+				$(checkedObj).attr("src",checkedPre+checkedSup).removeAttr("click");
+			}
+		}
+		
+		var clickImgSrc = $(this).attr("src");
+		var imgPre = clickImgSrc.toString().substring(0,clickImgSrc.toString().lastIndexOf("."));
+		var imgSup = clickImgSrc.toString().substring(clickImgSrc.toString().lastIndexOf("."),clickImgSrc.length);
+		$(this).attr("src",imgPre+"_after"+imgSup).attr("click","clicked");		
+	});
+	
+</script>
+</body>
+</html>
